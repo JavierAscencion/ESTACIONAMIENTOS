@@ -1,0 +1,5 @@
+>>> Warning 225 "D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\TPV 4685\miscelaneos.h" Line 4(13,19): Duplicate #define
+>>> Warning 225 "D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\TPV 4685\miscelaneos.h" Line 5(13,16): Duplicate #define
+>>> Warning 225 "D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\TPV 4685\miscelaneos.h" Line 6(14,16): Duplicate #define
+>>> Warning 225 "D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\TPV 4685\miscelaneos.h" Line 7(16,61): Duplicate #define
+*** Error 128 "D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\TPV 4685\miscelaneos.h" Line 7(9,15): A #DEVICE required before this line
