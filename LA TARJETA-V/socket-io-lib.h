@@ -131,11 +131,12 @@ void socketio_monitor(String mensaje){
     param1["id"] = "la tarjeta";
     //param1["now"]     = (uint32_t) now;
     param1["RespuestaESP32"]     = mensaje;
+    //Serial.print(output);
 
     // JSON to String (serializion)
     String output;
     serializeJson(doc, output);
-
+    Serial.print(output);
     // Send event
     socketIO.sendEVENT(output);
 }
