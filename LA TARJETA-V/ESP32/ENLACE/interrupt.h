@@ -1,6 +1,6 @@
-void IRAM_ATTR onTimer() {
+void IRAM_ATTR onTimer()
+{
   portENTER_CRITICAL_ISR(&timerMux);
   interruptCounter++;
   portEXIT_CRITICAL_ISR(&timerMux);
- 
 }

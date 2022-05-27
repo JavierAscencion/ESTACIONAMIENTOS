@@ -15,49 +15,35 @@ void heartBeatPrint()
   int mes = rtc.getMonth();
   int year = rtc.getYear();
 
-  //Serial.println(now);
+  // Serial.println(now);
 
-  timeClient.update(); //sincronizamos con el server NTP
+  timeClient.update(); // sincronizamos con el server NTP
 
-  if(DebugESP.Time == "time on"){
-  Serial.println(timeClient.getFormattedDate(0));
-  socketio_monitor(timeClient.getFormattedDate(0));
-  }
-//Imprimimos por puerto serie la hora actual
-/*
-  if (WiFi.status() == WL_CONNECTED)
-    Serial.print(F("H"));        // H means connected to WiFi
-  else
-   // Serial.print(F("F"));        // F means not connected to WiFi
-
-  if (num == 80)
+  if (DebugESP.Time == "time on")
   {
-   // Serial.println();
-    num = 1;
+    Serial.println(timeClient.getFormattedDate(0));
+    socketio_monitor(timeClient.getFormattedDate(0));
   }
-  else if (num++ % 10 == 0)
-  {
-   // Serial.print(F(" "));
-  }
-  */
+  // Imprimimos por puerto serie la hora actual
+ 
 }
 
-void sendRequest() 
+void sendRequest()
 {
   static bool requestOpenResult;
 
-  if(DebugESP.Get=="get on"){
-      Serial.println("GET->");
-      socketio_monitor("GET->");
-  //Serial.println();
+  if (DebugESP.Get == "get on")
+  {
+    Serial.println("GET->");
+    socketio_monitor("GET->");
+    // Serial.println();
   }
 
-  
   if (request.readyState() == readyStateUnsent || request.readyState() == readyStateDone)
   {
-    //requestOpenResult = request.open("GET","http://192.168.1.221:8080/api/tutorials");
-    requestOpenResult = request.open("GET",urlapi);
-    
+    // requestOpenResult = request.open("GET","http://192.168.1.221:8080/api/tutorials");
+    requestOpenResult = request.open("GET", urlapi);
+
     if (requestOpenResult)
     {
       // Only send() if open() returns true, or crash
@@ -76,51 +62,50 @@ void sendRequest()
   }
 }
 
-void requestCB(void* optParm, AsyncHTTPRequest* request, int readyState) 
+void requestCB(void *optParm, AsyncHTTPRequest *request, int readyState)
 {
-  (void) optParm;
-  
-  if (readyState == readyStateDone) 
+  (void)optParm;
+
+  if (readyState == readyStateDone)
   {
 
-     DatosNuevos = request->responseText();
-     if(DebugESP.Get=="get on"){
-       Serial.println("REQ.GET<-");
-       socketio_monitor("REQ.GET<-");
-       Serial.println(DatosNuevos);
-       socketio_monitor(DatosNuevos);
-       Serial.println("<");
-       socketio_monitor("<");
-     }
-   
-    
+    DatosNuevos = request->responseText();
+    if (DebugESP.Get == "get on")
+    {
+      Serial.println("REQ.GET<-");
+      socketio_monitor("REQ.GET<-");
+      Serial.println(DatosNuevos);
+      socketio_monitor(DatosNuevos);
+      Serial.println("<");
+      socketio_monitor("<");
+    }
+
     request->setDebug(false);
   }
 }
 
-
-void sendActualRequest(String message) {
+void sendActualRequest(String message)
+{
   static bool requestOpenResult;
 
-  if(DebugESP.Post == "post on"){
+  if (DebugESP.Post == "post on")
+  {
     Serial.println("POST->");
     socketio_monitor("POST->");
     Serial.println(message);
     socketio_monitor(message);
   }
-  
-  
+
   if (ActualRequest.readyState() == readyStateUnsent || ActualRequest.readyState() == readyStateDone)
   {
-    requestOpenResult = ActualRequest.open("POST","http://192.168.1.221:8080/api/tutorials");
-    ActualRequest.setReqHeader("content-type","application/json");
+    requestOpenResult = ActualRequest.open("POST", "http://192.168.1.221:8080/api/tutorials");
+    ActualRequest.setReqHeader("content-type", "application/json");
 
-    
     if (requestOpenResult)
     {
       // Only send() if open() returns true, or crash
-     // Serial.println("se envia solicitud POST: ");
-     // Serial.println(message);
+      // Serial.println("se envia solicitud POST: ");
+      // Serial.println(message);
       ActualRequest.send(message);
     }
     else
@@ -136,66 +121,51 @@ void sendActualRequest(String message) {
   }
 }
 
-void ActualCB(void* optParm, AsyncHTTPRequest* request, int readyState) 
+void ActualCB(void *optParm, AsyncHTTPRequest *request, int readyState)
 {
-  (void) optParm;
-  
-  if (readyState == readyStateDone) 
+  (void)optParm;
+
+  if (readyState == readyStateDone)
   {
-    if(DebugESP.Post == "post on"){
-     Serial.println("REQ.POST<-");
-     socketio_monitor("REQ.POST<-");
-    Serial.println(request->responseText());
-    socketio_monitor(request->responseText());
-    Serial.println("<"); 
-    socketio_monitor("<");
+    if (DebugESP.Post == "post on")
+    {
+      Serial.println("REQ.POST<-");
+      socketio_monitor("REQ.POST<-");
+      Serial.println(request->responseText());
+      socketio_monitor(request->responseText());
+      Serial.println("<");
+      socketio_monitor("<");
     }
-    
-    
+
     request->setDebug(false);
   }
 }
 
-void sendConfirmRequest(String message) {
+void sendConfirmRequest(String message)
+{
   static bool requestOpenResult;
 
-  if(DebugESP.Put == "put on"){
+  if (DebugESP.Put == "put on")
+  {
     Serial.println("PUT->");
     socketio_monitor("PUT->");
     Serial.println(message);
     socketio_monitor(message);
   }
 
-  
-  
   if (ConfirmRequest.readyState() == readyStateUnsent || ConfirmRequest.readyState() == readyStateDone)
   {
     DynamicJsonDocument doc(1024);
     deserializeJson(doc, message);
     String idEvento = doc["id"].as<String>();
-    //clima = dataJsonDes["weather"]["main"].as<String>();
-
-    //Serial.println("Jon:<");
-    //Serial.println(message);
-    //Serial.println(">");
-    //Serial.println("IdEvento:<");
-    //Serial.println(idEvento);
-    //Serial.println(">");
-    
-    //String idEvento = message.substring(6, 7);
     String urlserver = "http://192.168.1.221:8080/api/tutorials/";
     String urlserver_id = urlserver + idEvento;
 
     char sendurlid[150];
     urlserver_id.toCharArray(sendurlid, 150);
-    
-    //Serial.println("<");
-    //Serial.println(idEvento);
-    //Serial.println(">");
-    requestOpenResult = ConfirmRequest.open("PUT",sendurlid);
-    ConfirmRequest.setReqHeader("content-type","application/json");
+    requestOpenResult = ConfirmRequest.open("PUT", sendurlid);
+    ConfirmRequest.setReqHeader("content-type", "application/json");
 
-    
     if (requestOpenResult)
     {
       // Only send() if open() returns true, or crash
@@ -214,13 +184,14 @@ void sendConfirmRequest(String message) {
   }
 }
 
-void ConfirmCB(void* optParm, AsyncHTTPRequest* request, int readyState) 
+void ConfirmCB(void *optParm, AsyncHTTPRequest *request, int readyState)
 {
-  (void) optParm;
-  
-  if (readyState == readyStateDone) 
+  (void)optParm;
+
+  if (readyState == readyStateDone)
   {
-    if(DebugESP.Put == "put on"){
+    if (DebugESP.Put == "put on")
+    {
       Serial.println("REQ.PUT<-");
       socketio_monitor("REQ.PUT<-");
       Serial.println(request->responseText());
@@ -229,7 +200,6 @@ void ConfirmCB(void* optParm, AsyncHTTPRequest* request, int readyState)
       socketio_monitor("<");
     }
 
-    
     request->setDebug(false);
   }
 }

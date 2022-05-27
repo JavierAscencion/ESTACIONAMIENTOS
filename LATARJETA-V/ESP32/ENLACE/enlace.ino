@@ -45,19 +45,7 @@ void setup()
     configurar_wifi();
   }
 
-  // SerialBT.begin(bluetooth_name);
-
-  //////////////////////////////////////////////////////////////////////////////////////
-  //
-  //  WiFi.begin(SSID, PASSWORD);
-  //  Serial.print("Connecting to WiFi SSID: ");
-  //  Serial.println(SSID);
-  //
-  //  while (WiFi.status() != WL_CONNECTED) {
-  //    delay(1000);
-  //    Serial.print(".");
-  //  }
-  //
+ 
   Serial.print("\nConnected to the WiFi network IP ESP32--0>:");
   Serial.println(WiFi.localIP());
 
@@ -123,16 +111,7 @@ void setup()
 
 void loop()
 {
-  // httpServer.handleClient(); /// HANDLER DE CLIENTE ACTUALIZACION DE FIRMWARE
-  // if (Serial.available() > 0) mDashCLI(Serial.read());
   socketIO.loop();
-  // if(comando=="esp32"){
-  //  config_mode(comando);
-  //  if(comando=="esp32->"){
-  //    config_mode(comando);
-  //  }
-  //
-  // }
   /////////////////////////////////proceso para configurar wifi ////////////////////////////////
 
   if (bluetooth_disconnect)
