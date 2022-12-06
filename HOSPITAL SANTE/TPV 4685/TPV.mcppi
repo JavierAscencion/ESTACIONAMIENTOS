@@ -1,0 +1,83 @@
+[DEVICE]
+Name=P18F4685
+Clock=10000000
+[MEMORY_MODEL]
+Value=-1
+[BUILD_TYPE]
+Value=0
+[ACTIVE_TAB]
+Value=..\..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\__Lib_TFT_16bit_Defs.c
+[USE_EEPROM]
+Value=0
+[USE_HEAP]
+Value=0
+[HEAP_SIZE]
+Value=2000
+[EEPROM_DEFINITION]
+Value=
+[FILES]
+File0=TPV.c
+Count=1
+[BINARIES]
+Count=0
+[IMAGES]
+Count=0
+ActiveImageIndex=-1
+[OPENED_FILES]
+File0=TPV.c
+File1=table_eeprom.h
+File2=impresora_termica.h
+File3=..\..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\__Lib_TFT_16bit_Defs.c
+Count=4
+[EEPROM]
+Count=0
+[ACTIVE_COMMENTS_FILES]
+Count=0
+[OTHER_FILES]
+Count=0
+[SEARCH_PATH]
+Path0=..\..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\
+Count=1
+[HEADER_PATH]
+Path0=..\..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\
+Count=1
+[HEADERS]
+Count=0
+[PLDS]
+Count=0
+[Useses]
+File0=CAN
+File1=Conversions
+File2=C_Math
+File3=C_Stdlib
+File4=C_String
+File5=C_Type
+File6=EEPROM
+File7=I2C
+File8=Lcd
+File9=Lcd_Constants
+File10=Software_I2C
+File11=Software_SPI
+File12=Software_UART
+File13=SPI
+File14=SPI_Ethernet
+File15=SPI_Ethernet_24j600
+File16=SPI_Glcd
+File17=SPI_Lcd
+File18=SPI_Lcd8
+File19=SPI_T6963C
+File20=Sprintf
+File21=Sprinti
+File22=Sprintl
+File23=UART
+File24=Net_Ethernet_28j60
+File25=Net_Ethernet_28j60_Defs
+Count=26
+[EXPANDED_NODES]
+0=TPV.mcppi
+Count=1
+[LIB_EXPANDED_NODES]
+0=mikroE Libraries
+1=System Libraries
+1930=Third Party Libraries
+Count=3

@@ -1,0 +1,13 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4685 -DL -O11111114 -fo10 -N"D:\PROYECTOS\PARKING\HOSPITAL SANTE\TPV 4685\TPV.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"D:\PROYECTOS\PARKING\HOSPITAL SANTE\TPV 4685\" -SP"D:\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"D:\PROYECTOS\PARKING\HOSPITAL SANTE\TPV 4685\" -IP"D:\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" "TPV.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_Sprintf.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_EEPROM_1024.mcl" "__Lib_I2C_c34.mcl" "__Lib_SPI_c345.mcl" "__Lib_UART_c67.mcl" "__Lib_CAN_C_A.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_SPIGlcd.mcl" "__Lib_SPILcd.mcl" "__Lib_SPILcd8.mcl" "__Lib_SPIT6963C.mcl" "__Lib_EthEnc28j60.mcl" "__Lib_EthEnc24j600.mcl" "__Lib_NetEthEnc28j60.mcl" "__Lib_NetEthEnc28j60_Defs.mcl"	 
+warning: 0	1501	Specified search path does not exist: 'D:\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses'	 
+warning: 0	1502	Specified include path does not exist: 'D:\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses'	 
+hint: 0	1139	Available RAM: 3307 [bytes], Available ROM: 98304 [bytes]	 
+diagnostics: 0	122	Compilation Started	miscelaneos.h
+diagnostics: 1889	123	Compiled Successfully	TPV.c
+diagnostics: 0	127	All files Compiled in 1938 ms	 
+hint: 0	1144	Used RAM (bytes): 3041 (92%)  Free RAM (bytes): 266 (8%)	Used RAM (bytes): 3041 (92%)  Free RAM (bytes): 266 (8%)
+hint: 0	1144	Used ROM (bytes): 63914 (65%)  Free ROM (bytes): 34390 (35%)	Used ROM (bytes): 63914 (65%)  Free ROM (bytes): 34390 (35%)
+diagnostics: 0	125	Project Linked Successfully	TPV.mcppi
+diagnostics: 0	128	Linked in 593 ms	 
+diagnostics: 0	129	Project 'TPV.mcppi' completed: 2656 ms	 
+diagnostics: 0	103	Finished successfully: 29 nov. 2022, 09:31:46	TPV.mcppi

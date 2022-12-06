@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4685 -UICD -DL -O11111114 -fo10 -N"D:\PROYECTOS\PARKING\HOSPITAL SANTE\Expendedora 4685\Expendedora.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"D:\PROYECTOS\PARKING\HOSPITAL SANTE\Expendedora 4685\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"D:\PROYECTOS\PARKING\HOSPITAL SANTE\Expendedora 4685\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Packages\Network_Ethernet_PIC\Uses\" "Expendedora.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_Sprintf.mcl" "__Lib_PrintOut.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_EEPROM_1024.mcl" "__Lib_I2C_c34.mcl" "__Lib_SPI_c345.mcl" "__Lib_UART_c67.mcl" "__Lib_CAN_C_A.mcl" "__Lib_CANSPI.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_EthEnc28j60.mcl" "__Lib_EthEnc24j600.mcl" "__Lib_NetEthEnc28j60.mcl" "__Lib_NetEthEnc28j60_Defs.mcl"	 
+hint: 0	1139	Available RAM: 3307 [bytes], Available ROM: 98304 [bytes]	 
+diagnostics: 0	122	Compilation Started	miscelaneos.h
+diagnostics: 2054	123	Compiled Successfully	Expendedora.c
+diagnostics: 0	127	All files Compiled in 1984 ms	 
+hint: 0	1144	Used RAM (bytes): 1301 (39%)  Free RAM (bytes): 2006 (61%)	Used RAM (bytes): 1301 (39%)  Free RAM (bytes): 2006 (61%)
+hint: 0	1144	Used ROM (bytes): 42839 (44%)  Free ROM (bytes): 55465 (56%)	Used ROM (bytes): 42839 (44%)  Free ROM (bytes): 55465 (56%)
+diagnostics: 0	125	Project Linked Successfully	Expendedora.mcppi
+diagnostics: 0	128	Linked in 531 ms	 
+diagnostics: 0	129	Project 'Expendedora.mcppi' completed: 2734 ms	 
+diagnostics: 0	103	Finished successfully: 30 nov. 2022, 11:44:57	Expendedora.mcppi

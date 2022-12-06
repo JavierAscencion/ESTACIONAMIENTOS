@@ -1,0 +1,68 @@
+<BOOKMARKS>
+  <BM>
+    <ID>8</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Expendedora\Expendedora\lib_can.h</File>
+    <Comment>  if</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Expendedora\Expendedora\Expendedora.c</File>
+    <Comment>      uart1_write_text()</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Pruebas Placa\Expendedora\Expendedora.c</File>
+    <Comment>      can_write(nodo3, &amp;hola, sizeof(hola), 0, true);</Comment>
+  </BM>
+  <BM>
+    <ID>8</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Pruebas Placa\Expendedora\lib_can.h</File>
+    <Comment>      if(can.rxBusy){</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Estacionamiento beta\Expendedora 4685\Expendedora.c</File>
+    <Comment>const char CAN_VAL[] = "VAL";</Comment>
+  </BM>
+  <BM>
+    <ID>8</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Estacionamiento beta v1\Expendedora 4685\lib_can.h</File>
+    <Comment>      if(TXB1CON.TXERR) //!TXB1CON.TXABT</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Estacionamiento beta v1\Expendedora 4685\Expendedora.c</File>
+    <Comment>  mysql_create_new(tableEventos,"registro&amp;35\nestatus&amp;1", 10);</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\@Estacionamiento prototipo\Estacionamiento beta v3 tablas\Expendedora 4685\Expendedora.c</File>
+    <Comment>        else</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Estacionamiento Jinetes\Expendedora 4685\Expendedora.c</File>
+    <Comment>//#define CREATE_CODE_TABLE</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\Proyectos Luis\Estacionamiento Jinetes\Expendedora 4680\Expendedora.c</File>
+    <Comment>      SALIDA_RELE1 = 1;</Comment>
+  </BM>
+  <BM>
+    <ID>2</ID>
+    <Line>76</Line>
+    <File>D:\PROYECTOS\PARKING\HOSPITAL SANTE\Expendedora 4685\Expendedora.c</File>
+    <Comment>const long baudiosRate = 38400;  //Velocidad de los baudios</Comment>
+  </BM>
+</BOOKMARKS>
